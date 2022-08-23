@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="rgb(54, 26, 133)" />
+  <title>ZNAIN BookShelf</title>
+  <!-- framework -->
+  <link rel="shortcut icon" href="https://i.pinimg.com/236x/7a/d6/53/7ad653f83b3ab3dbe4b1ae0b8ebd250d.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- isi -->
+<body>
+  <nav class="top-bar"></nav> 
+  <div class="content">
+    <div class="col-1">
+      <div class="user-information my-container">
+        <div class="user-img">
+          <img src="https://i.pinimg.com/236x/31/2f/f7/312ff7e437a950badbc4d5f02c6ec9a0.jpg" alt="Avatar" />
+        </div>
+        <h1 class="user-name">ZNainDEV</h1>
+        <p class="user-bio"> 🔧 Im Front-End, Back-End, 3D Modeller & NFT Artist <br>📖 Im Student at SMK Jakarta 1 <br>💡 IT Consultant & Teacher at Wibucode</p>
+        <ul>
+          <li>
+            <p>current number of books</p>
+            <h4 id="jumlahBuku">20</h4>
+          </li>
+        </ul>
+      </div>
+      <div class="my-container mt-2">
+        <h2>Search...</h2>
+        <form>
+          <input class="" type="text" name="" id="bookTitle" placeholder="Search your book"/>
+          <button class="submit" type="submit"><i class="fi-rr-search"></i></button>
+        </form>
+      </div>
+      <div class="my-container icons">
+        <div class="my-icon">
+          <div class="read-icon">
+            <i class="fi-rr-book-alt"></i>
+          </div>
+          <h5>Read</h5>
+        </div>
+        <div class="my-icon">
+          <div class="unread-icon">
+             <i class="fi-rr-bookmark"></i>
+          </div>
+          <h5>Unread</h5>
+        </div>
+        <div class="my-icon">
+           <div class="add-book" id="add-book">
+            <i class="fi-sr-add"></i>
+          </div>
+          <h5>add</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="my-container welcome">
+        <h1>Welcome To Bookshelf Apps</h1>
+        <p>manage your book here</p>
+      </div>
+      <div class="content-book">
+        <div class="unread" id="unread">
+          <h4 class="">Unread</h4>
+        </div>
+         <div class="read" id="read">
+          <h4>Already Read</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modals -->
+    <div id="modal">
+        <section class="my-container">
+            <h2>New Book</h2>
+            <form id="form">
+                <div class="input-group">
+                    <input type="text" id="title" placeholder="Title" class="input-form"
+                        maxlength="120" pattern="^[a-zA-Z0-9_ ]*$" required />
+                </div>
+                <div class="input-group">
+                    <input type="text" id="author" placeholder="Author" class="input-form"
+                        maxlength="60" pattern="^[a-zA-Z0-9_ ]*$" required />
+                </div>
+                <div class="input-group">
+                    <input type="date" id="year" 
+                        class="input-form" min="1900" max="2026" />
+                </div>
+                <div class="button-group">
+                    <button type="reset" class="close" id="close">Close</button>
+                    <button type="submit" id="save">Save</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    
+
+<!-- js -->
+  <script src="./storage.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
